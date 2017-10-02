@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Drinker",
+  "version": "0.2",
+  "icons": {"128": "icond.png" },
+  "permissions": [
+    "tabs"
+],
+
+"browser_action": {
+  "default_title": "Drinker",      // optional; shown in tooltip
+  "default_popup": "popup.html"        // optional
+},
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["push.js", "jquery-3.2.1.min .js", "alertify.js", "notify.js",  "content.js"],
+      "css": ["css/alertify.css", "css/themes/default.css"]
+    }
+  ]
+
+}
